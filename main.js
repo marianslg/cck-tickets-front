@@ -1,3 +1,17 @@
-fetch('https://cck-tickets.herokuapp.com/getAllEvents')
+var ul = document.getElementById("event-list");
+
+fetch('https://cck-tickets.herokuapp.com/getAllEvents', {
+        'mode': 'cors',
+        'headers': {
+            'Access-Control-Allow-Origin': '*',
+        }
+    })
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+
+        data.forEach(element => {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(element));
+            ul.appendChild(li);
+        });
+    });
