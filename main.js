@@ -1,7 +1,7 @@
 var ul = document.getElementById("event-list");
 
 fetch('https://cck-tickets.herokuapp.com/getAllEvents', {
-        'mode': 'cors',
+        'mode': 'no-cors',
         'headers': {
             'Access-Control-Allow-Origin': '*',
         }
