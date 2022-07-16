@@ -4,3 +4,40 @@ body {
     padding-top: 2%;
     padding-bottom: 2%;
 }
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.link {
+    font-size: 20px;
+    word-wrap: break-word
+}
+
+.date {
+    font-size: 18px;
+    text-align: right;
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        font-size: 5vw;
+    }
+    .date {
+        font-size: 3vw;
+        text-align: right;
+    }
+    .link {
+        font-size: 4vw;
+        word-wrap: break-word
+    }
+    h1 {
+        text-align: center;
+        font-size: 5.5vw;
+    }
+}

@@ -13,18 +13,16 @@ fetch('https://cck-tickets.herokuapp.com/getAllEvents')
             div.className = 'd-flex w-100 justify-content-between'
 
             var h5 = document.createElement("h5");
-            h5.className = 'mb-1'
+            h5.className = 'mb-1 title'
             h5.innerText = (element.data.soldOut == true ? "(Agotado) " : "") + element.data.name
-            h5.style = "font-size:5vw"
 
             var small = document.createElement("small");
             small.innerText = element.data.date
-            small.style = "font-size:3vw; text-align: right"
+            small.className = "date"
 
             var p = document.createElement("p");
-            p.className = 'mb-1'
+            p.className = 'mb-1 link'
             p.innerText = element.url
-            p.style = 'word-wrap: break-word'
 
             div.appendChild(h5)
             div.appendChild(small)
