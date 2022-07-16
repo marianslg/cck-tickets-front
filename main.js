@@ -19,7 +19,7 @@ fetch('https://cck-tickets.herokuapp.com/getAllEvents')
 
             var small = document.createElement("small");
             small.innerText = element.data.date
-            small.style = "font-size:3vw"
+            small.style = "font-size:3vw; text-align: right"
 
             var p = document.createElement("p");
             p.className = 'mb-1'
