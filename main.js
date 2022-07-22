@@ -14,7 +14,7 @@ fetch('https://cck-tickets.herokuapp.com/getAllEvents')
 
             var h5 = document.createElement("h5");
             h5.className = 'mb-1 title'
-            h5.innerText = (element.data.soldOut == true ? "(Agotado) " : "") + element.data.name
+            h5.innerText = (element.data.soldOut === true ? "(Agotado) " : "") + element.data.name
 
             var small = document.createElement("small");
             small.innerText = element.data.date
