@@ -1,4 +1,7 @@
-fetch('https://cck-tickets.herokuapp.com/getAllEvents')
+let queryString = new URLSearchParams(window.location.search);
+let url = queryString.has('allEvents') ? "https://cck-tickets.herokuapp.com/getAllEvents" : "https://cck-tickets.herokuapp.com/getAllFutureEvents"
+
+fetch(url)
     .then(response => response.json())
     .then(data => {
         var div1 = document.getElementById("event-list");
@@ -17,7 +20,7 @@ fetch('https://cck-tickets.herokuapp.com/getAllEvents')
             h5.innerText = (element.soldOut != 'undefined' && element.soldOut == 1 ? "(Agotado) " : "") + element.name
 
             var small = document.createElement("small");
-            small.innerText = element.eventDate
+            small.innerText = new Date(element.eventDate).toLocaleDateString('es-Es', { weekday: "long", month: "long", day: "numeric" })
             small.className = "date"
 
             var p = document.createElement("p");
